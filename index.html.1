@@ -1,0 +1,13 @@
+<div class="jumbotron text-center">
+  <h1 class="display-4">Welcome to Ebrahym</h1>
+  <p class="lead">A complete website with chat, image upload, and admin features</p>
+  <hr class="my-4">
+  <% if (!user) { %>
+    <p>Register or login to access all features</p>
+    <a class="btn btn-primary btn-lg" href="/auth/register" role="button">Register</a>
+    <a class="btn btn-success btn-lg" href="/auth/login" role="button">Login</a>
+  <% } else { %>
+    <p>Welcome back, <%= user.username %>!</p>
+    <a class="btn btn-primary btn-lg" href="/chat" role="button">Go to Chat</a>
+  <% } %>
+</div>
